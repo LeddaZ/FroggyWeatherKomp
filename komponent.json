@@ -1,0 +1,251 @@
+{
+  "preset_info": {
+    "title": "FroggyWeather",
+    "description": "Weather Komponent that uses Google's cute 'Froggy' :)",
+    "author": "Leonardo Ledda (LeddaZ)"
+  },
+  "preset_root": {
+    "internal_type": "KomponentModule",
+    "internal_title": "FroggyWeather",
+    "globals_list": {
+      "icon": {
+        "index": 1,
+        "type": "LIST",
+        "title": "Icon",
+        "entries": "\"$wi(icon)$\"##Current,\"$wf(icon, 0)$\"##Today Forecast,\"$wf(icon, 1)$\"##Tomorrow Forecast,\"$wf(icon, 2)$\"##2 Days Forecast,\"$wf(icon, 3)$\"##3 Days Forecast,\"$wf(icon, 4)$\"##4 Days Forecast,\"$wf(icon, 5)$\"##5 Days Forecast,\"$wf(icon, 6)$\"##6 Days Forecast,\"$wf(icon, 7)$\"##7 Days Forecast,\"$wf(icon, 8)$\"##8 Days Forecast,\"$wf(icon, 9)$\"##9 Days Forecast",
+        "value": "$wi(icon)$"
+      },
+      "nightico": {
+        "index": 2,
+        "type": "SWITCH",
+        "title": "NightIco",
+        "value": 1
+      },
+      "opacity": {
+        "index": 3,
+        "type": "NUMBER",
+        "title": "Opacity",
+        "min": 0,
+        "max": 100,
+        "value": 100
+      },
+      "size": {
+        "index": 4,
+        "type": "NUMBER",
+        "title": "Size",
+        "min": 10,
+        "max": 720,
+        "value": 100
+      },
+      "rotate": {
+        "index": 5,
+        "type": "NUMBER",
+        "title": "Rotate",
+        "min": 0,
+        "max": 359
+      },
+      "clear-day": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "clear-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/clear-day.png"
+      },
+      "clear-night": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "clear-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/clear-night.png"
+      },
+      "fog-day": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "fog-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/fog-day.png"
+      },
+      "fog-night": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "fog-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/fog-night.png"
+      },
+      "hail-day": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "hail-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/hail-day.png"
+      },
+      "hail-night": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "hail-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/hail-night.png"
+      },
+      "lsnow-day": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "lsnow-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/lsnow-day.png"
+      },
+      "lsnow-night": {
+        "index": 10,
+        "type": "BITMAP",
+        "title": "lsnow-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/lsnow-night.png"
+      },
+      "mcloudy-day": {
+        "index": 11,
+        "type": "BITMAP",
+        "title": "mcloudy-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/mcloudy-pcloudy-day.png"
+      },
+      "mcloudy-night": {
+        "index": 12,
+        "type": "BITMAP",
+        "title": "mcloudy-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/mcloudy-pcloudy-night.png"
+      },
+      "pcloudy-day": {
+        "index": 13,
+        "type": "BITMAP",
+        "title": "pcloudy-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/mcloudy-pcloudy-day.png"
+      },
+      "pcloudy-night": {
+        "index": 14,
+        "type": "BITMAP",
+        "title": "pcloudy-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/mcloudy-pcloudy-night.png"
+      },
+      "rain": {
+        "index": 15,
+        "type": "BITMAP",
+        "title": "rain",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/rain.png"
+      },
+      "showers-day": {
+        "index": 16,
+        "type": "BITMAP",
+        "title": "showers-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/showers-day.png"
+      },
+      "showers-night": {
+        "index": 17,
+        "type": "BITMAP",
+        "title": "showers-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/showers-night.png"
+      },
+      "sleet-day": {
+        "index": 18,
+        "type": "BITMAP",
+        "title": "sleet-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/sleet-day.png"
+      },
+      "sleet-night": {
+        "index": 19,
+        "type": "BITMAP",
+        "title": "sleet-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/sleet-night.png"
+      },
+      "snow-day": {
+        "index": 20,
+        "type": "BITMAP",
+        "title": "snow-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/snow-day.png"
+      },
+      "snow-night": {
+        "index": 21,
+        "type": "BITMAP",
+        "title": "snow-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/snow-night.png"
+      },
+      "tornado": {
+        "index": 22,
+        "type": "BITMAP",
+        "title": "tornado",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/tornado-tshower-tstorm.png"
+      },
+      "tshower-day": {
+        "index": 23,
+        "type": "BITMAP",
+        "title": "tshower-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/tornado-tshower-tstorm.png"
+      },
+      "tshower-night": {
+        "index": 24,
+        "type": "BITMAP",
+        "title": "tshower-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/tornado-tshower-tstorm.png"
+      },
+      "tstorm": {
+        "index": 25,
+        "type": "BITMAP",
+        "title": "tstorm",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/tornado-tshower-tstorm.png"
+      },
+      "unknown": {
+        "index": 26,
+        "type": "BITMAP",
+        "title": "unknown",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/unknown.png"
+      },
+      "windy-day": {
+        "index": 27,
+        "type": "BITMAP",
+        "title": "windy-day",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/windy-day.png"
+      },
+      "windy-night": {
+        "index": 28,
+        "type": "BITMAP",
+        "title": "windy-night",
+        "toggles": 1,
+        "value": "kfile://org.kustom.provider/bitmaps/windy-night.png"
+      }
+    },
+    "internal_locked": "true",
+    "viewgroup_items": [
+      {
+        "internal_type": "BitmapModule",
+        "internal_toggles": {
+          "bitmap_bitmap": 10,
+          "bitmap_width": 100,
+          "bitmap_rotate": 100,
+          "bitmap_alpha": 100
+        },
+        "internal_globals": {
+          "bitmap_width": "size",
+          "bitmap_rotate": "rotate",
+          "bitmap_alpha": "opacity"
+        },
+        "internal_formulas": {
+          "bitmap_bitmap": "$if(gv(icon)=tshower, if(ai(isday), gv(tshower-day), gv(tshower-night)), gv(icon)=shower, if(ai(isday), gv(showers-day), gv(showers-night)), gv(icon)=sleet, if(ai(isday), gv(sleet-day), gv(sleet-night)), gv(icon)=lsnow, if(ai(isday), gv(lsnow-day), gv(lsnow-night)), gv(icon)=snow, if(ai(isday), gv(snow-day), gv(snow-night)), gv(icon)=hail, if(ai(isday), gv(hail-day), gv(hail-night)), gv(icon)=fog, if(ai(isday), gv(fog-day), gv(fog-night)), gv(icon)=windy, if(ai(isday), gv(windy-day), gv(windy-night)), gv(icon)=mcloudy, if(ai(isday), gv(mcloudy-day), gv(mcloudy-night)), gv(icon)=pcloudy, if(ai(isday), gv(pcloudy-day), gv(pcloudy-night)), gv(icon)=clear, if(ai(isday), gv(clear-day), gv(clear-night)), gv(gv(icon)))$"
+        }
+      }
+    ]
+  }
+}
